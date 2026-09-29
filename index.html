@@ -822,6 +822,9 @@ function continueAfterBreak() {
   currentConditionIndex++;
   currentRound++;
 
+  points = 0;
+  document.getElementById('points-display').textContent = '0';
+
   // Safety: if we've somehow exhausted conditions but trials remain, finish
   if (currentConditionIndex >= conditionOrder.length || currentTrial >= totalTrials) {
     finishExperiment();
